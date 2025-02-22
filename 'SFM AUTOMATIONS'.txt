@@ -1,0 +1,49 @@
+Name  "Orb Automation"
+
+every 20 ticks do
+
+        -- Energized Steel
+    if Barrel has ge 1 iron_block and Barrel has ge 1 gold_block 
+    then
+        input 1 each iron_block from Barrel
+        input 1 each gold_block from Barrel
+        output retain 1 each iron_block to orb
+        output retain 1 each gold_block to orb
+    end
+        -- Output
+    if orb has ge 1 *energized*
+    then
+        input from orb
+        output to Barrel
+    end
+end
+
+every 20 ticks do 
+
+   if Barrel has ge 1 emerald_block 
+    then
+         input 1 each emerald_block from Barrel
+         output retain 1 each emerald_block to orb
+     end
+end
+
+every 20 ticks do 
+
+     if Barrel has ge 1 diamond_block 
+    then
+         input 1 each diamond_block from Barrel
+         output retain 1 each diamond_block to orb
+     end
+end
+
+every 20 ticks do 
+
+     if Barrel has ge 1 blaze_rod_block 
+    then
+         input 1 each blaze_rod_block from Barrel
+         output retain 1 each blaze_rod_block to orb
+     end
+end
+1
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+name "new"
